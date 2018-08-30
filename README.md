@@ -24,9 +24,12 @@ Use command: ` python generate_comb.py`
 
 ## Step 4: Assess the ablility to restore the accuracy of the augmented convolutional layer:
 Use command: `python without_aug_conv.py` to get the test accuracy of the original VGG16 using morphed data as traning and testing dataset.
+
 Use command: `python Aug_conv_test.py` to get the test accuracy of the aug-conv layer+VGG16 using morphed data as traning and testing dataset.
+
 The default dataset is CIFAR10. If you wish to use CIFAR100, please change the parameter `Dataset` in  `hyperparameter.py` to perform the test on CIFAR100.
 
 ## Step 5: Assess the security
 To assess the security of our method under the inverse traning senario, use command `python LCreverse_dataset.py` to generate the inverse traning dataset
+
 Then use command `LC_train.py` to train the inverse matrix. 10 of the retrieve images and the orignal images will be saved to your work directory,  and the MSEloss between the original image and the retrieved image will be print out.
